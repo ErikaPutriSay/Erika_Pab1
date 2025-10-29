@@ -8,28 +8,53 @@ class DetailScreen extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          //judul
+          // Judul
           Container(
-            //anak pertama
             margin: EdgeInsets.all(8),
             child: const Text(
               'PUNTI KAYU',
               textAlign: TextAlign.center,
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 24
+              ),
             ),
           ),
-          //icon dan text
+          // Icon dan Text
           Container(
-            //anak kedua
-            margin: EdgeInsets.all(8),
+            margin: EdgeInsets.all(16),
             child: Row(
-              children: [Icon(Icons.calendar_today), SizedBox(height: 8)],
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                // Icon Pertama
+                Column(
+                  children: [
+                    Icon(Icons.calendar_today),
+                    SizedBox(height: 8),
+                    Text('Buka Setiap Hari')
+                  ],
+                ),
+                // Icon Kedua
+                Column(
+                  children: [
+                    Icon(Icons.timer),
+                    SizedBox(height: 8),
+                    Text('09.00 - 16.00')
+                  ],
+                ),
+                // Icon Ketiga
+                Column(
+                  children: [
+                    Icon(Icons.money),
+                    SizedBox(height: 8),
+                    Text('Rp 15.000')
+                  ],
+                ),
+              ],
             ),
           ),
-          //deskripi
-          Container(
-            //anak ketiga
-          ),
+          // Deskripsi
+          Container()
         ],
       ),
     );
